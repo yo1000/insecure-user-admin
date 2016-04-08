@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Signin</title>
+    <link href="../static/tether/css/tether.min.css" th:href="@{/tether/css/tether.min.css}" rel="stylesheet"/>
+    <link href="../static/bootstrap4a2/css/bootstrap.min.css" th:href="@{/bootstrap4a2/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link href="../static/font-awesome/css/font-awesome.min.css" th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link href="../static/app/css/style.css" th:href="@{/app/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="navigator">
+    <nav class="navbar navbar-static-top navbar-fixed-top bg-faded">
+        <a class="navbar-brand" href="#"><span>INSECURE USER ADMIN</span></a>
+    </nav>
+</div>
+<div class="container">
+    <form class="form-inline" action="signin" method="post">
+        <input type="text" class="form-control" name="username" placeholder="ユーザー名"/>
+        <input type="password" class="form-control" name="password" placeholder="パスワード"/>
+        <button type="submit" class="btn btn-primary">サインイン</button>
+    </form>
+</div>
+<script src="../static/jquery2/js/jquery.min.js" th:src="@{/jquery2/js/jquery.min.js}"></script>
+<script src="../static/tether/js/tether.min.js" th:src="@{/tether/js/tether.min.js}"></script>
+<script src="../static/bootstrap4a2/js/bootstrap.min.js" th:src="@{/bootstrap4a2/js/bootstrap.min.js}"></script>
+</body>
+</html>

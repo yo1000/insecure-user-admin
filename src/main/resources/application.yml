@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:file:${application.data.file}
+    username: sa
+    password:
+
+application:
+  data:
+    file: ./insecure.datastore
