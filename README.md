@@ -13,6 +13,16 @@ $ cd insecure-user-admin
 $ ./mvnw spring-boot:run
 ```
 
+ブラウザで URL にアクセスします。  
+[http://localhost:8080/](http://localhost:8080/)
+
+もし、`8080` ポートが空いていない場合、  
+起動コマンドを、以下の様に変更して試してみてください。
+
+```
+$ ./mvnw spring-boot:run -Dserver.port=18080
+```
+
 ## Exercise
 
 ### Step1
