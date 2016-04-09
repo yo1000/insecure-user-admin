@@ -23,6 +23,10 @@ $ ./mvnw spring-boot:run
 $ ./mvnw spring-boot:run -Dserver.port=18080
 ```
 
+アプリケーションが、`18080` ポートで起動するので、  
+改めて以下の URL にアクセスします。  
+[http://localhost:18080/](http://localhost:18080/)
+
 ## Exercise
 
 ### Step1
