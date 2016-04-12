@@ -22,18 +22,18 @@ public class JdbcUserRepository implements UserRepository {
     }
 
     public Map<String, Object> select(String username, String password) {
-        return getJdbcTemplate().queryForList("SELECT " +
+        List<Map<String, Object>> users = getJdbcTemplate().queryForList("SELECT " +
                 "username, password, fullname " +
                 "FROM user " +
                 "WHERE username='" + username + "' " +
-                "AND   password='" + password + "'").get(0);
+                "AND   password='" + password + "'");
+        return users.isEmpty() ? null : users.get(0);
     }
 
     public Map<String, Object> update(String username, String password, String fullname) {
         getJdbcTemplate().update("UPDATE user SET " +
                 "fullname='" + fullname + "' " +
-                "WHERE username = '" + username + "' " +
-                "AND   password = '" + password + "'");
+                "WHERE username = '" + username + "'");
 
         return select(username, password);
     }
